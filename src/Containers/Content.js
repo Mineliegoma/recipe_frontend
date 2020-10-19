@@ -18,8 +18,12 @@ class Content extends React.Component {
 
     renderRecipePage = () => {
         let recipe = this.props.recipes.find(recipe => recipe.id === this.state.id)
-        return <RecipePage key={recipe.id} recipe={recipe} clickHandler={this.clickHandler} />
+        return <RecipePage key={recipe.id} recipe={recipe} clickHandler={this.hideRecipePageHandler} />
 
+    }
+
+    hideRecipePageHandler = () => {
+        this.setState({ clicked: !this.state.clicked, id: null })
     }
 
     // Shuffle array

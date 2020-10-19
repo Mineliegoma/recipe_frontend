@@ -157,13 +157,13 @@ align-items: center; */
   border: 2px dashed grey;
 }
 
-.columns-cards {
+/* .columns-cards {
   columns: 2 auto;
 
-}
+} */
 
 .recipe-page {
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .recipe-create {
