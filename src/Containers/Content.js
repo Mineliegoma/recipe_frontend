@@ -50,8 +50,8 @@ class Content extends React.Component {
         return(
             <div className='master-detail-element detail'>
                 <div className='render-recipes' >
-                    <div className="columns-cards">
-                        {this.state.clicked ? this.renderRecipePage() : this.renderRecipeCards()}
+                    <div >
+                        {this.state.clicked ? this.renderRecipePage() : <div className="columns-cards">{this.renderRecipeCards()}</div>}
                     </div>
                 </div>
             </div>

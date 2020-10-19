@@ -148,6 +148,11 @@ div.sidebar ul li:hover {
 align-items: center; */
 }
 
+
+.recipe-page {
+  justify-content: center;
+}
+
 .recipe-card {
   
   width: 400px;
@@ -157,14 +162,11 @@ align-items: center; */
   border: 2px dashed grey;
 }
 
-/* .columns-cards {
+.columns-cards {
   columns: 2 auto;
 
-} */
-
-.recipe-page {
-  justify-content: center;
 }
+
 
 .recipe-create {
   display: flex;
