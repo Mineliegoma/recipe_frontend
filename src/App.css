@@ -139,14 +139,21 @@ div.sidebar ul li:hover {
   width:75%;
 }
 
-.note-editor {
+.recipe-create {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.note-editor textarea {
+.recipe-create textarea {
   flex: 1;
+}
+
+form.new-recipe-form {
+  border: dashed black 1px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .button-row {
@@ -181,3 +188,6 @@ button:hover, .nav-bar:hover, input[type="submit"]:hover {
 button:focus, input[type="submit"]:focus {
   outline: none;
 }
+
+
+
