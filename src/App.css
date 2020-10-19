@@ -130,6 +130,7 @@ div.sidebar ul li:hover {
   border: 2px dashed grey;
 }
 
+
 .sidebar {
   width:25%;
   overflow: scroll;
@@ -137,6 +138,23 @@ div.sidebar ul li:hover {
 
 .detail {
   width:75%;
+}
+
+.render-recipes {
+  display: flex;
+  flex-direction: column;
+
+/* justify-content: center;
+align-items: center; */
+}
+
+.recipe-card {
+  width: fit-content;
+  justify-content: left;
+}
+
+.recipe-page {
+  justify-content: space-between;
 }
 
 .recipe-create {

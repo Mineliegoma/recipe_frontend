@@ -5,7 +5,7 @@ class RecipePage extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <div>
+            <div className="recipe-page">
                 <h2>Recipe Page</h2>
                 {/* < h3>{this.props.recipe.title}</h3>
                 <img alt="this image no longer available" src={this.props.recipe.image} width={400}  />
