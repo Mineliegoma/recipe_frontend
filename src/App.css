@@ -1,5 +1,53 @@
-.App {
+
+body {
+  padding: 20px;
   text-align: center;
+  background-color: rgb(247, 248, 237);
+}
+.header {
+  text-align: center;
+  letter-spacing: 1rem;
+}
+.card-front {
+  width: 260px;
+  border: 1px solid #f5bcbc20;
+  border-radius: 0.5px;
+  display: inline-block;
+  text-align:center;
+  background-color: rgb(238, 182, 143);
+  
+  
+}
+
+/* .logo {
+  margin-bottom: 10px;
+} */
+
+ .container {
+  width: 100%;
+}
+
+
+
+img {
+  width: 260px;
+  
+  
+}
+
+.button {
+  color: rgb(237, 240, 231);
+  font-size: 1.3rem;
+  border: none;
+  background: none;
+  
+  cursor: pointer;
+  
+} */
+
+
+.App {
+  display: center;
 }
 
 .App-logo {
@@ -13,7 +61,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +70,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
