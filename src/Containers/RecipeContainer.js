@@ -15,7 +15,7 @@ class RecipeContainer extends React.Component {
         .catch(console.log)
       }
     render() {
-        console.log(this.state.recipes)
+        // console.log(this.state.recipes)
         return (
         <div className='container'>
             <Sidebar recipes={this.state.recipes} />

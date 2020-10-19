@@ -3,13 +3,13 @@ import React from 'react';
 class RecipePage extends React.Component {
 
     render() {
-        console.log(this.props)
+        console.log(this.props.recipe)
         return (
             <div className="recipe-page">
                 <h2>Recipe Page</h2>
-                {/* < h3>{this.props.recipe.title}</h3>
+                < h3>{this.props.recipe.title}</h3>
                 <img alt="this image no longer available" src={this.props.recipe.image} width={400}  />
-                <h4>This recipe serves: {this.props.recipe.servings}</h4> */}
+                <h4>This recipe serves: {this.props.recipe.servings}</h4>
             </div>
         )
     }

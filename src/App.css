@@ -149,8 +149,17 @@ align-items: center; */
 }
 
 .recipe-card {
-  width: fit-content;
+  
+  width: 400px;
   justify-content: left;
+  margin: 10px 0px;
+  padding: 20px;
+  border: 2px dashed grey;
+}
+
+.columns-cards {
+  columns: 2 auto;
+
 }
 
 .recipe-page {
