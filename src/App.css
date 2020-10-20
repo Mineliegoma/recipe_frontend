@@ -12,68 +12,35 @@ body {
 
 
 /* Styles */
-h2, input[name="title"], textarea {
-  font-family: 'IBM Plex Mono'
-}
-
-p.instructions {
-	font-family: monospace;
-	font-size: 32px;
-	text-align: center;
-}
-
-.note-editor input[name="title"] {
-  font-size: 24px;
-  font-weight: 700;
-  border: 1px dashed grey;
-  margin: 0.5em 0;
-  box-sizing: border-box;
-}
-
-.note-editor textarea {
-  font-size: 1em;
-  border: 1px dashed grey;
-  box-sizing: border-box;
-  resize: none;
-}
-
-.nav-bar {
-  width: 100%;
-  background-image: linear-gradient(to right top, #8C33E3, #696CE8, #4A9EEC);
-  background-repeat: no-repeat;
-  font-family: 'IBM Plex Mono';
-  font-size: 16px;
-  letter-spacing: 1.5px;
-  font-weight: bolder;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.nav-item {
-  list-style: none;
-  color: white;
-  padding: 4px;
-}
 
 .filter {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 2px dashed grey;
+  /* border: 2px dashed grey; */
 }
 
 input {
-  font-size: 24px;
+  font-size: 90%;
   height: 40px;
   width: 100%;
-  border: none;
+  /* border: 2px dashed grey; */
+}
+
+textarea {
+  font-size: relative;
+  height: 40px;
+  width: 100%;
 }
 
 input::placeholder {
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: bolder;
+}
+
+textarea::placeholder {
   padding-left: 10px;
   color: rgba(0, 0, 0, 0.55);
   font-weight: bolder;
@@ -130,6 +97,13 @@ div.sidebar ul li:hover {
   border: 2px dashed grey;
 }
 
+.search-bar {
+  margin: 10px ;
+  padding: 10px;
+  width: 95%;
+  align-items: center;
+}
+
 
 .sidebar {
   width:25%;
@@ -141,9 +115,11 @@ div.sidebar ul li:hover {
 }
 
 .render-recipes {
+  margin-top: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-
+  column-count: 2;
 /* justify-content: center;
 align-items: center; */
 }
@@ -153,30 +129,25 @@ align-items: center; */
   justify-content: center;
 }
 
+.ingredient-list {
+  columns: 5 auto;
+  font-size: 20px;
+}
+
 .recipe-card {
-  
-  width: 400px;
-  justify-content: left;
-  margin: 10px 0px;
+  break-inside: avoid;
+  width: 85%;
+  height: 40%;
+  justify-content: center;
+  margin: 20px;
   padding: 20px;
   border: 2px dashed grey;
 }
 
 .columns-cards {
   columns: 2 auto;
-
 }
 
-
-.recipe-create {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.recipe-create textarea {
-  flex: 1;
-}
 
 form.new-recipe-form {
   border: dashed black 1px;
@@ -198,19 +169,23 @@ input[type="submit"] {
 
 button, input[type="submit"] {
   width: 125px;
-  border-radius: 200px;
+  border-radius: 100px;
+  margin-left: 40px;
   margin-right: 10px;
   padding: 5px 35px;
   border: 0px;
-  background-image: linear-gradient(to right top, #8C33E3, #696CE8, #4A9EEC);
+  background-color: cadetblue;
+  /* background-image: linear-gradient(to right top, #8C33E3, #696CE8, #4A9EEC); */
   background-repeat: no-repeat;
   color: white;
   font-size: 14px;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 button:hover, .nav-bar:hover, input[type="submit"]:hover {
-  background-image: linear-gradient(to right top, #8A2387, #E94057, #F27121);
+  /* background-image: linear-gradient(to right top, #8A2387, #E94057, #F27121); */
+  background-color: teal;
   background-repeat: no-repeat;
 }
 

@@ -2,15 +2,21 @@ import React from 'react';
 
 class RecipeCard extends React.Component {
 
+    ingredientLister = () => {
+        return this.props.recipe.ingredients.slice(0, 3).map(obj => <li>{obj.epices}</li>)
+    }
+
     render() {
-        console.log(this.props.recipe.id)
+        console.log(this.props.recipe)
         return (
             <div className="recipe-card" onClick={() => this.props.clickHandler(this.props.recipe.id)}>
-                < h3>{this.props.recipe.title}</h3>
+                < h2>{this.props.recipe.title}</h2>
                 <img alt="this image no longer available" src={this.props.recipe.image}  width="300px" />
-                <h4>This recipe serves: {this.props.recipe.servings}</h4>
-                {/* <p>{list of ingredients}</p> */}
-            </div>
+                <h3>This recipe is ready in: {this.props.recipe.readyInMinutes} minutes!</h3>
+                <div>Ingredients:
+                {this.ingredientLister()}   <i>... (click to see more) </i>      
+                </div>
+                </div>
         )
     }
 

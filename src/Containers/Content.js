@@ -1,7 +1,7 @@
 import React from 'react';
-import RecipeCard from '../components/RecipeCard'
-import RecipePage from '../components/RecipePage'
-import Search from '../components/Search'
+import RecipeCard from '../Components/RecipeCard'
+import RecipePage from '../Components/RecipePage'
+import Search from '../Components/Search'
 
 class Content extends React.Component {
 
@@ -55,8 +55,10 @@ class Content extends React.Component {
         // if RecipeCard is clicked, render that recipe's RecipePage
         return (
             <div className='master-detail-element detail'>
+                <div className="search-bar" >
+                <Search searchRec={this.state.searchRec} searchHandler={this.searchChange} />
+                </div>
                 <div className='render-recipes' >
-                    <Search searchRec={this.state.searchRec} searchHandler={this.searchChange} />
                     <div >
                         {this.state.clicked ? this.renderRecipePage() : <div className="columns-cards">{this.renderRecipeCards()}</div>}
                     </div>

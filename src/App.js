@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from './containers/Header'
-import RecipeContainer from './containers/RecipeContainer'
+import Header from './Containers/Header'
+import RecipeContainer from './Containers/RecipeContainer'
 
 class App extends React.Component {
   render() {

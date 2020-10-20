@@ -1,6 +1,6 @@
 import React from 'react';
-import Create from '../components/Create'
-import Search from '../components/Search'
+import Create from '../Components/Create'
+import Search from '../Components/Search'
 
 
 class Sidebar extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Content from './Content';
-import Search from '../components/Search'
+import Search from '../Components/Search'
 
 class RecipeContainer extends React.Component {
 
