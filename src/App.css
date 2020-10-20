@@ -218,5 +218,12 @@ button:focus, input[type="submit"]:focus {
   outline: none;
 }
 
+.close {
+  width: 10px;
+  height: 25px;
+  font: 14px;
+  text-align: center;
+}
+
 
 
