@@ -38,7 +38,7 @@ class Content extends React.Component {
     renderRecipeCards = () => {
         let shuffled = this.props.recipes.sort(() => 0.5 - Math.random());
 
-        return shuffled.slice(0, 6).filter(el => el.title.toLowerCase().includes(this.state.searchRec.toLowerCase())).map(recipe => <RecipeCard key={recipe.id} recipe={recipe} clickHandler={this.clickHandler} recipeHandler={this.renderRecipePage} />)
+        return shuffled.filter(el => el.title.toLowerCase().includes(this.state.searchRec.toLowerCase())).slice(0, 6).map(recipe => <RecipeCard key={recipe.id} recipe={recipe} clickHandler={this.clickHandler} recipeHandler={this.renderRecipePage} />)
     }
 
     searchChange = e => {
@@ -47,8 +47,8 @@ class Content extends React.Component {
 
 
     render() {
-        console.log("click", this.state.clicked)
-        console.log(this.props.recipes)
+        // console.log("click", this.state.clicked)
+        // console.log(this.props.recipes)
 
         // render six random RecipeCards if unclicked - or - 
         // render six searchTerm matches RecipeCards if searched and unclicked - or -
