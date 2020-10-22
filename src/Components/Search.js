@@ -6,6 +6,7 @@ function Search(props) {
       <h3>Find a Recipe</h3>
       <div className="filter">
         <input
+
           id="search-bar"
           type="text"
           value={props.searchElement}
