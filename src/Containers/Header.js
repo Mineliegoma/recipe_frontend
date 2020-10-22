@@ -8,10 +8,10 @@ class Header extends React.Component {
     return (
       <header className="App-header">
         <div style={{ display: "flex", justifyContent: "space-around" }}>
-          {/* <Signup /> */}
-          <h1>Recipes</h1>
+          <Signup />
+          {/* <h1>Recipes</h1> */}
           {/* <Search searchTerm={this.state.searchTerm} changeHandler={this.searchHandler} /> */}
-          {/* <Login /> */}
+          <Login />
         </div>
       </header>
     )

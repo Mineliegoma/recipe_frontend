@@ -1,7 +1,8 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Content from './Content';
-import Favorites from './Favorites'
+import Create from '../components/Create'
+// import Favorites from './Favorites'
 import Search from '../components/Search'
 import RecipeCard from '../components/RecipeCard'
 import { Route, Switch } from 'react-router-dom'
@@ -13,7 +14,7 @@ class RecipeContainer extends React.Component {
   state = {
     recipes: [],
 
-    favorite: []
+    // favorite: []
     // user: nil
   }
 
@@ -24,44 +25,26 @@ class RecipeContainer extends React.Component {
       .catch(console.log)
   }
 
-  // renderRecipeCards = () => {
-  //   let shuffled = this.state.recipes.sort(() => 0.5 - Math.random());
+  submitHandler = (obj) => {
+    console.log("submitting:", obj)
+    // e.preventDefault()
+    // this.props.submitHandler(this.state)
+    fetch('http://localhost:3000/api/v1/recipes', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(obj)
 
-  //   return shuffled.slice(0, 6).map(recipe => <RecipeCard key={recipe.id} recipe={recipe} clickHandler={this.clickHandler} recipeHandler={this.renderRecipePage} />)
-  // }
-  // FavoritesClickHandler = (id) => {
-  //   console.log("recipe clicking", id)
-  //   // need to know which dog to edit
-  //   // send an AJAX request to edit 
-  //   fetch(`http://localhost:3000/api/v1/recipes/${id}`, {
-  //     method: "PATCH",
-  //     headers: {
-  //       "content-type": "application/json",
-  //       accepts: "application/json"
-  //     },
-  //     body: JSON.stringify({ favorite: true })
-  //   })
-  //     .then(resp => resp.json())
-  //     .then(updatedRecipe => {
-  //       let newArray = [...this.state.recipe]
-  //       let aRecipe = newArray.find(el => el.id === updatedRecipe.id)
-  //       let idx = newArray.indexOf(aRecipe)
-  //       console.log(idx)
-  //       newArray[`${idx}`] = updatedRecipe
-  //       this.setState({ recipe: newArray })
-  //     })
-  //     .catch(console.log)
-  //   // update current array to reflect the change
-  // }
-
-
-
-
-
-  // renderFavorites = () => {
-  //   return this.state.recipe.filter(el => el.favorite)
-  // }
-
+    })
+      .then(resp => resp.json())
+      .then(newRecipe => {
+        let newArray = [...this.state.recipes, newRecipe]
+        this.setState({
+          recipes: newArray
+        }, () => console.log("new sTATE:", this.state.recipe)
+        )
+      })
+      .catch(console.log)
+  }
 
 
   render() {
@@ -71,7 +54,7 @@ class RecipeContainer extends React.Component {
         {/* <Favorites recipes={this.state.favorite} clickHandler={this.renderFavorites} /> */}
 
         <div className='container'>
-          ÷
+          <Create submitHandler={this.submitHandler} />
           <Sidebar recipes={this.state.recipes} />
           <Content recipes={this.state.recipes} />
 

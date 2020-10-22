@@ -9,8 +9,8 @@ function NavBar() {
    <NavLink to="/recipes">
     <p>index</p>
    </NavLink>
-   {/* <NavLink to="/favorites">
-    <p>favorite Page</p>
+   {/* <NavLink to="/recipes/recipePage">
+    <p>Recipe Page</p>
    </NavLink> */}
   </div>
  )

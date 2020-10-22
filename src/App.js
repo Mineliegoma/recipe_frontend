@@ -6,7 +6,7 @@ import Header from './containers/Header'
 import RecipeContainer from './containers/RecipeContainer'
 import HeyWelcome from './components/HeyWelcome'
 import NavBar from './components/NavBar';
-import Favorites from './containers/Favorites';
+// import Favorites from './containers/Favorites';
 function App() {
 
 
@@ -14,18 +14,21 @@ function App() {
 
   return (
     <>
+
       <NavBar />
+      {/* <div className="app">
+        <Header />
+      </div> */}
       <Switch>
+
         <Route path="/recipes" component={RecipeContainer} />
         {/* <Route path="/favorites" component={Favorites} /> */}
         <Route component={HeyWelcome} />
 
       </Switch>
+
     </>
-    //       <div className="app">
-    //   <Header />
-    //   <RecipeContainer />
-    // </div>
+
   );
 
 }

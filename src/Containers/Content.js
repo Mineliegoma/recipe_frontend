@@ -3,7 +3,7 @@ import RecipeCard from '../components/RecipeCard'
 import RecipePage from '../components/RecipePage'
 import Search from '../components/Search'
 import { Route, Switch } from 'react-router-dom'
-import Favorites from './Favorites'
+// import Favorites from './Favorites'
 
 
 class Content extends React.Component {
@@ -37,7 +37,7 @@ class Content extends React.Component {
     renderRecipeCards = () => {
         let shuffled = this.props.recipes.sort(() => 0.5 - Math.random());
 
-        return shuffled.filter(el => el.title.toLowerCase().includes(this.state.searchRec.toLowerCase())).slice(0, 6).map(recipe => <RecipeCard key={recipe.id} recipe={recipe} clickHandler={this.clickHandler} recipeHandler={this.renderRecipePage} />)
+        return shuffled.filter(el => el.title.toLowerCase().includes(this.state.searchRec.toLowerCase())).slice(0, 12).map(recipe => <RecipeCard key={recipe.id} recipe={recipe} clickHandler={this.clickHandler} recipeHandler={this.renderRecipePage} />)
     }
 
     searchChange = e => {
