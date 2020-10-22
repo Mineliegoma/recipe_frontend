@@ -9,14 +9,9 @@ class Create extends React.Component {
         summary: "",
         readyInMinutes: "",
         servings: "",
-        ingredients: {}
+        ingredients: []
       }
 
-      // ingredientChangeHandler = (id) => {
-      //   this.state.ingredients.map(epices => 
-      //  newarray << id: recipe.id and epices: epices)
-      // this.setState(id: id, ingredients: newarray)
-      // }
     
       submitHandler = (e) => {
         e.preventDefault()
@@ -54,7 +49,7 @@ class Create extends React.Component {
       }
     
       render() {
-        console.log(this.state)
+        console.log(this.state.ingredients)
         return (
             <>
             <h3>Create a Recipe</h3>
@@ -63,7 +58,7 @@ class Create extends React.Component {
             <input placeholder="servings" type="integer" name="servings" value={this.state.servings} onChange={this.changeHandler} />
             <input placeholder="Image URL" type="text" name="image" value={this.state.image} onChange={this.changeHandler} />
             <input placeholder="Ready In Minutes" type="text" name="readyInMinutes" value={this.state.readyInMinutes} onChange={this.changeHandler} />
-            <input placeholder="Ingredients, separated by commas" type="text" name="ingredients" value={this.state.ingredients.epices} onChange={this.ingredientChangeHandler} />
+            <input placeholder="Ingredients, separated by commas" type="text" name="ingredients" value={this.state.ingredients} onChange={this.changeHandler} />
             <textarea placeholder="Summary..." rows={10} type="text" name="summary" value={this.state.summary} onChange={this.changeHandler} />
             <input type="submit" value="Submit" />
           </form>

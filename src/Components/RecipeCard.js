@@ -3,7 +3,7 @@ import React from 'react';
 class RecipeCard extends React.Component {
 
     ingredientLister = () => {
-        return this.props.recipe.ingredients.slice(0, 3).map(obj => <li>{obj.epices}</li>)
+        return this.props.recipe.ingredients.slice(0, 3).map(obj => <li key={obj.id}>{obj.epices}</li>)
     }
 
     render() {

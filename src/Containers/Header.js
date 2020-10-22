@@ -9,7 +9,7 @@ class Header extends React.Component {
       <header className="App-header">
         <div style={{ display: "flex", justifyContent: "space-around" }}>
           <Signup />
-          <h1>Recipes</h1>
+          <h1 className="app-name">Recipes</h1>
           {/* <Search searchTerm={this.state.searchTerm} changeHandler={this.searchHandler} /> */}
           <Login />
         </div>
