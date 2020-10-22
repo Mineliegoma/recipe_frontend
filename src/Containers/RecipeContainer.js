@@ -2,10 +2,10 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import Content from './Content';
 import Create from '../components/Create'
-// import Favorites from './Favorites'
-import Search from '../components/Search'
-import RecipeCard from '../components/RecipeCard'
-import { Route, Switch } from 'react-router-dom'
+// // import Favorites from './Favorites'
+// import Search from '../components/Search'
+// import RecipeCard from '../components/RecipeCard'
+// import { Route, Switch } from 'react-router-dom'
 
 
 
@@ -51,8 +51,6 @@ class RecipeContainer extends React.Component {
     // console.log(this.state.recipes)
     return (
       <>
-        {/* <Favorites recipes={this.state.favorite} clickHandler={this.renderFavorites} /> */}
-
         <div className='container'>
           <Create submitHandler={this.submitHandler} />
           <Sidebar recipes={this.state.recipes} />

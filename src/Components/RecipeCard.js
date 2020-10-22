@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, link } from 'react-router-dom'
+// import { NavLink, link } from 'react-router-dom'
 
 class RecipeCard extends React.Component {
 

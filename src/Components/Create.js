@@ -12,42 +12,6 @@ class Create extends React.Component {
     ingredients: {}
   }
 
-  // ingredientChangeHandler = (id) => {
-  //   this.state.ingredients.map(epices => 
-  //  newarray << id: recipe.id and epices: epices)
-  // this.setState(id: id, ingredients: newarray)
-  // }
-
-  // submitHandler = (e) => {
-  //   e.preventDefault()
-  //   return this.props.submitHandler(this.state)
-  // fetch('http://localhost:3000/api/v1/recipes', {
-  //   method: 'POST',
-  //   headers: { 'content-type': 'application/json' },
-  //   body: JSON.stringify({
-  //     title: this.state.title,
-  //     image: this.state.image,
-  //     summary: this.state.summary,
-  //     readyInMinutes: this.state.readyInMinutes,
-  //     servings: this.state.servings,
-  //     ingredients: this.state.ingredients
-  //   })
-  // })
-  //   .then(resp => resp.json())
-  //   .then(newRecipe => {
-  //     let newArray = [...this.state.recipes, newRecipe]
-  //     this.setState({
-  //       recipes: newArray,
-  //       title: "",
-  //       image: "",
-  //       summary: "",
-  //       readyInMinutes: "",
-  //       servings: "",
-  //       ingredients: []
-  //     })
-  //   })
-  //   .catch(console.log)
-  //}
 
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
