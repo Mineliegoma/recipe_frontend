@@ -38,7 +38,7 @@ class Content extends React.Component {
     renderRecipeCards = () => {
         let shuffled = this.props.recipes.sort(() => 0.5 - Math.random());
 
-        return shuffled.filter(el => el.title.toLowerCase().includes(this.state.searchRec.toLowerCase())).slice(0, 10).map(recipe => <RecipeCard key={recipe.id} recipe={recipe} clickHandler={this.clickHandler} recipeHandler={this.renderRecipePage} />)
+        return shuffled.filter(el => el.title.toLowerCase().includes(this.state.searchRec.toLowerCase())).map(recipe => <RecipeCard key={recipe.id} recipe={recipe} clickHandler={this.clickHandler} recipeHandler={this.renderRecipePage} />).slice(0, 10)
     }
 
     searchChange = e => {
