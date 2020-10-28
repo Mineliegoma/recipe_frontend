@@ -2,8 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 function NavBar() {
  return (
-  <div>
-   <NavLink to="/home">
+  <div className="navB">
+
+   <NavLink to="/home" >
     <p>home</p>
    </NavLink>
    <NavLink to="/recipes">
@@ -12,6 +13,7 @@ function NavBar() {
    {/* <NavLink to="/recipes/recipePage">
     <p>Recipe Page</p>
    </NavLink> */}
+
   </div>
  )
 }

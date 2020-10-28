@@ -16,14 +16,12 @@ function App() {
     <>
 
       <NavBar />
-      {/* <div className="app">
-        <Header />
-      </div> */}
+
       <Switch>
 
         <Route path="/recipes" component={RecipeContainer} />
         {/* <Route path="/favorites" component={Favorites} /> */}
-        <Route component={HeyWelcome} />
+        <Route path="/" component={HeyWelcome} />
 
       </Switch>
 

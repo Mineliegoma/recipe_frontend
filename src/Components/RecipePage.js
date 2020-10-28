@@ -20,14 +20,17 @@ class RecipePage extends React.Component {
         console.log(this.props.recipe.ingredients)
         return (
             <div className="recipe-page" >
-                < h1>{this.props.recipe.title}</h1>
-                <img alt="this image no longer available" src={this.props.recipe.image} width={500} onClick={this.props.clickHandler} />
-                {/* <button className="addFavorite" onClick={this.clickHandler}>Add to favorites</button> */}
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    < h1 >{this.props.recipe.title}</h1>
+                    {/* <img alt="this image no longer available" src={this.props.recipe.image} width={800} onClick={this.props.clickHandler} /> */}
+                    <button type="button" className="close" onClick={this.props.clickHandler}>X  </button>
+                </div>
                 <div dangerouslySetInnerHTML={{ __html: text }} />
                 <div>
-                    <h2>Here the ingredient List</h2>
-                    {this.ingredientLister()}
-
+                    <h2>Ingredients:</h2>
+                    <div className="ingredient-list">
+                        {this.ingredientLister()}
+                    </div>
                 </div>
             </div>
         )

@@ -53,7 +53,7 @@ class RecipeContainer extends React.Component {
       <>
         <div className='container'>
           <Create submitHandler={this.submitHandler} />
-          <Sidebar recipes={this.state.recipes} />
+          <Sidebar recipes={this.state.recipes} ></Sidebar>
           <Content recipes={this.state.recipes} />
 
 
